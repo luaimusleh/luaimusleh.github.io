@@ -81,6 +81,32 @@
             background: #fff;
             margin-bottom: 20px;
         }
+        .dropdown {
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            text-align: left;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dropdown:hover {
+            background-color: #0056b3;
+        }
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
+        }
+        .dropdown.active + .dropdown-content {
+            display: block;
+        }
+        .arrow {
+            margin-left: 10px;
+        }
         .degree-certification {
             text-align: center;
             margin-top: 20px;
@@ -144,7 +170,10 @@
                     <a href="Final_SQL_Project.docx" download="Final_SQL_Project.docx">Database Projects: Final SQL Project</a>
                 </h3>
                 <p><strong>Objective:</strong> Developed a database project involving schema design, relational diagrams, and comprehensive queries to analyze and manage client-consultant relationships and contract data.</p>
-                <div class="dropdown">View Project Highlights</div>
+                <div class="dropdown">
+                    View Project Highlights
+                    <span class="arrow">▼</span>
+                </div>
                 <div class="dropdown-content">
                     <ul>
                         <li><strong>Schema Design:</strong> Created a 3NF-compliant schema with the following tables:
