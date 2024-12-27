@@ -41,6 +41,18 @@
             width: 100%;
             bottom: 0;
         }
+        .about-me {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #333;
+        }
         .project {
             border: 1px solid #ddd;
             padding: 15px;
@@ -61,6 +73,10 @@
         .button:hover {
             background-color: #0056b3;
         }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -70,17 +86,21 @@
             <a href="#about">About</a>
             <a href="#resume">Resume</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>
-                I am a Data Analyst Professional with over four years of experience in streamlining data processes,
-                managing open enrollment projects, and implementing automation solutions within the insurance and benefits sector.
-                Passionate about leveraging data to optimize performance and improve business outcomes.
-            </p>
+            <div class="about-me">
+                <img src="profile.jpg" alt="Luai Musleh Profile Picture" class="profile-picture">
+                <p>
+                    I am a Data Analyst Professional with over four years of experience in streamlining data processes,
+                    managing open enrollment projects, and implementing automation solutions within the insurance and benefits sector.
+                    Passionate about leveraging data to optimize performance and improve business outcomes.
+                </p>
+            </div>
         </section>
         <section id="resume">
             <h2>Resume</h2>
@@ -110,6 +130,16 @@
                 </p>
             </div>
         </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Foundations of Business Intelligence, Coursera, October 2024</li>
+                <li>Google Ads Measurement Certification, Google Skillshop, November 2024</li>
+                <li>Google Ads Search Certification, Google Skillshop, November 2024</li>
+                <li>Advanced SQL for Data Scientists, LinkedIn Learning, August 2020</li>
+                <li>SQL: Data Reporting and Analysis, LinkedIn Learning, June 2020</li>
+            </ul>
+        </section>
         <section id="contact">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:musleh.luai99@gmail.com">musleh.luai99@gmail.com</a></p>
@@ -117,5 +147,8 @@
             <p>Phone: 708-802-2797</p>
         </section>
     </div>
+    <footer>
+        <p>&copy; 2024 Luai Musleh</p>
+    </footer>
 </body>
 </html>
