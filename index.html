@@ -42,9 +42,7 @@
             bottom: 0;
         }
         .about-me {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            text-align: center;
         }
         .profile-picture {
             border-radius: 50%;
@@ -52,8 +50,9 @@
             height: 150px;
             object-fit: cover;
             border: 3px solid #333;
+            margin-bottom: 20px;
         }
-        .project {
+        .project, .certification {
             border: 1px solid #ddd;
             padding: 15px;
             border-radius: 8px;
@@ -76,6 +75,14 @@
         ul {
             list-style-type: disc;
             margin-left: 20px;
+        }
+        .degree-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border: 3px solid #333;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -132,13 +139,25 @@
         </section>
         <section id="certifications">
             <h2>Certifications</h2>
-            <ul>
-                <li>Foundations of Business Intelligence, Coursera, October 2024</li>
-                <li>Google Ads Measurement Certification, Google Skillshop, November 2024</li>
-                <li>Google Ads Search Certification, Google Skillshop, November 2024</li>
-                <li>Advanced SQL for Data Scientists, LinkedIn Learning, August 2020</li>
-                <li>SQL: Data Reporting and Analysis, LinkedIn Learning, June 2020</li>
-            </ul>
+            <div class="certification">
+                <p>Foundations of Business Intelligence, Coursera, October 2024</p>
+            </div>
+            <div class="certification">
+                <p>Google Ads Measurement Certification, Google Skillshop, November 2024</p>
+            </div>
+            <div class="certification">
+                <p>Google Ads Search Certification, Google Skillshop, November 2024</p>
+            </div>
+            <div class="certification">
+                <p>Advanced SQL for Data Scientists, LinkedIn Learning, August 2020</p>
+            </div>
+            <div class="certification">
+                <p>SQL: Data Reporting and Analysis, LinkedIn Learning, June 2020</p>
+            </div>
+            <div class="certification">
+                <h3>Bachelor’s Degree Certificate</h3>
+                <img src="bachelors-degree.jpg" alt="Bachelor’s Degree Certificate" class="degree-image">
+            </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
