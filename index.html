@@ -44,9 +44,18 @@
         }
         .about-me {
             display: flex;
-            align-items: center;
-            justify-content: center;
             gap: 20px;
+        }
+        .contact-details {
+            width: 30%;
+            font-size: 14px;
+        }
+        .contact-details p {
+            margin: 5px 0;
+        }
+        .profile-picture-container {
+            text-align: center;
+            width: 70%;
         }
         .profile-picture {
             border-radius: 50%;
@@ -54,13 +63,6 @@
             height: 250px;
             object-fit: cover;
             border: 3px solid #333;
-        }
-        .contact-details {
-            max-width: 300px;
-            font-size: 14px;
-        }
-        .contact-details p {
-            margin: 5px 0;
         }
         .project, .certification {
             border: 1px solid #ddd;
@@ -86,34 +88,15 @@
         }
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav a {
-                margin: 5px 5px;
-                padding: 8px;
-            }
             .about-me {
                 flex-direction: column;
-                text-align: center;
             }
-            .profile-picture {
-                width: 200px;
-                height: 200px;
+            .profile-picture-container {
+                width: 100%;
             }
             .contact-details {
+                width: 100%;
                 text-align: center;
-                max-width: 100%;
-            }
-            .container {
-                padding: 10px;
-            }
-        }
-        @media (max-width: 480px) {
-            nav a {
-                display: block;
-                margin: 5px 0;
-            }
-            .profile-picture {
-                width: 150px;
-                height: 150px;
             }
         }
     </style>
@@ -136,13 +119,10 @@
                     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/luai-musleh/" target="_blank">linkedin.com/in/luai-musleh</a></p>
                     <p><strong>Phone:</strong> 708-802-2797</p>
                 </div>
-                <img src="profile.jpg" alt="Luai Musleh Profile Picture" class="profile-picture">
+                <div class="profile-picture-container">
+                    <img src="profile.jpg" alt="Luai Musleh Profile Picture" class="profile-picture">
+                </div>
             </div>
-            <p style="text-align: center;">
-                I am a Data Analyst Professional with over four years of experience in streamlining data processes,
-                managing open enrollment projects, and implementing automation solutions within the insurance and benefits sector.
-                Passionate about leveraging data to optimize performance and improve business outcomes.
-            </p>
         </section>
         <section id="portfolio">
             <h2>Portfolio</h2>
@@ -153,11 +133,25 @@
                 <p>
                     Objective: Developed a database project involving schema design, relational diagrams, and comprehensive queries to analyze and manage client-consultant relationships and contract data.
                 </p>
-                <strong>Highlights:</strong>
+                <strong>Project Highlights:</strong>
                 <ul>
-                    <li>Designed 3NF-compliant schema and ERD for optimized data management.</li>
-                    <li>Developed 10 business-use-case queries including active contracts tracking and client-consultant region analysis.</li>
-                    <li>Created reports and tables to analyze client, consultant, and contract data efficiently.</li>
+                    <li><strong>Schema Design:</strong> Created a 3NF-compliant schema with the following tables:
+                        <ul>
+                            <li><strong>Region:</strong> Tracks location and regional associations.</li>
+                            <li><strong>Contract:</strong> Stores contract details, including status and difficulty.</li>
+                            <li><strong>Client:</strong> Manages client-specific data such as personal details and location.</li>
+                            <li><strong>Consultant:</strong> Tracks consultant details, expertise, and assignments.</li>
+                            <li><strong>Cross-Referencing:</strong> Includes <em>ContractConsultant</em>, <em>Class</em>, and <em>ClassConsultant</em> tables.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Query Development:</strong> Designed 10 optimized SQL queries, including:
+                        <ul>
+                            <li>Identifying client-consultant relationships by region.</li>
+                            <li>Tracking active contracts and filtering by difficulty levels.</li>
+                            <li>Displaying client and contract details for performance analysis.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Relational Diagram:</strong> Visualized database relationships through an ERD and relational schema for seamless data flow.</li>
                 </ul>
             </div>
         </section>
@@ -183,7 +177,7 @@
                 <img src="bachelors-degree.jpg" alt="Bachelor’s Degree Certificate" class="degree-image">
                 <p>
                     Bachelor of Science in Information Systems<br>
-                    Graduated May 2020
+                    Graduated March 2021
                 </p>
             </div>
         </section>
